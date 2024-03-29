@@ -1,0 +1,196 @@
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font: normal 10pt arial;
+}
+$base_color: #0f0f0f;
+$segundary_color: #212121;
+$tercery_color: #222222;
+$quartery_color: #3D3D3D;
+$quintery_color: #475569;
+$sistery_color: #64748b;
+.icone {
+    height: 17px;
+    width: 17px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.hovering {
+    padding: 5px;
+}
+.hovering:hover {
+    background-color: #212121;
+    transition: 400ms;
+    border-radius: 10px;
+}
+.container {
+    background-color: $base_color;
+    // height: 120vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 6fr;
+    gap: 1%;
+    color: white;
+    .header {
+        grid-column: 2/3;
+        background-color: $segundary_color;
+        .pesquisa {
+            background-color: $base_color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            .pesquisa2 {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            input[type="search"] {
+                padding-left: 2em;
+                color: white;
+                background-color: $base_color;
+                border: 1px solid $segundary_color;
+                border-radius: 50px 0px 0px 50px;
+                height: 40%;
+                width: 40%;
+            }
+            input[type="search"]:focus {
+                outline: none;
+                border: 1px solid #1c62b9;
+            }
+            input[type="submit"] {
+                display: none;
+                height: 50%;
+                width: 20%;
+            }
+            label[for="pesquisa"] {
+                border-radius: 0px 50px 50px 0px;
+                background-color: $tercery_color;
+                height: 40%;
+                width: 5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    .sidebar {
+        grid-column: 1/1;
+        grid-row: 1 / auto-fit;
+        background-color: $base_color;
+        .painel {
+            padding-left: 0.5em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .logo {
+                height: auto;
+                margin-top: 1.5em;
+                padding-bottom: 2em;
+                display: flex;
+                justify-content: start;
+                .titulo {
+                    padding-left: 0.4em;
+                }
+            }
+            .cabeca {
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                border-bottom: 0.5px solid white;
+            }
+            .voce {
+                display: flex;
+                flex-direction: column;
+                border-bottom: 0.5px solid white;
+            }
+            .canal {
+                padding-top: 2em;
+                display: flex;
+                flex-direction: column;
+            }
+            a {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+    }
+    .nav {
+        grid-column: 2/3;
+        height: 5em;
+        padding-right: 1%;
+        // background-color: ;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        align-content: center;
+        justify-items: center;
+        gap: 2%;
+        .nave {
+            height: 100%;
+            width: 100%;
+            padding: 1em;
+            border-radius: 10px;
+            text-align: center;
+            background-color: $quartery_color;
+        }
+    }
+    .article {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 1%;
+        .section1 {
+            background-color: $base_color;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 10px;
+            .caixa {
+                height: 250px;
+                background-color: $base_color;
+                cursor: pointer;
+                .tamb {
+                    height: 70%;
+                    width: 80%;
+                    border-radius: 10px;
+                    margin-bottom: 0.5em;
+                }
+                .canal {
+                    height: 3em;
+                    width: 3em;
+                    margin-right:1em;
+                    border-radius: 50%;
+                }
+            }
+        
+            .caixa1 {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-between;
+                .pretext {
+                    width: 60%;
+                    display: flex;
+                    align-items: start;
+                    justify-content: space-around;
+                    .pretext2 {
+                        display: flex;
+                        flex-direction: column;
+                        .lkC{
+                            color: #767676;
+                        }
+                    }
+                  
+                }
+            }
+        }
+    }
+}
